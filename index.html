@@ -1,0 +1,810 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Josiah's Front-End Starter Kit</title>
+    <!-- Bootstrap Icons CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <!-- Bootstrap 5 CSS -->
+    <link rel="stylesheet" href="assets/vendor/bootstrap/bootstrap5.min.css">
+    <!-- SweetAlert2 CSS -->
+    <link rel="stylesheet" href="assets/vendor/sweetalert2/sweetalert2.min.css">
+    <!-- Google Fonts -->
+    <link rel="stylesheet" href="assets/vendor/googlefont/googlefont.min.css">
+    <!-- AOS CSS -->
+    <link rel="stylesheet" href="assets/vendor/aos/aos.min.css">
+    <!-- Main Custom Css -->
+    <link rel="stylesheet" href="assets/css/main.css">
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top">
+        <div class="container">
+            <a class="navbar-brand fw-bold text-primary" href="#">
+                <i class="bi bi-box-seam me-2"></i>Josiah's Kit
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#bootstrap">Bootstrap</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#sweetalert">SweetAlert</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#aos">AOS</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#icons">Icons</a>
+                    </li>
+                </ul>
+                <button class="btn btn-primary ms-3" onclick="showDemoAlert()">
+                    <i class="bi bi-lightning-charge-fill me-1"></i> Try Demo
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-section text-white">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6 mb-5 mb-lg-0" data-aos="fade-right">
+                    <h1 class="fw-bold display-4 mb-4">Ultimate Front-End Starter Kit</h1>
+                    <p class="lead mb-4">Learn how to implement powerful UI components with code examples and best
+                        practices.</p>
+                    <div class="d-flex flex-wrap gap-2">
+                        <button class="btn btn-light btn-lg px-4" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                            <i class="bi bi-window-stack me-2"></i> Try Modal
+                        </button>
+                        <button class="btn btn-outline-light btn-lg px-4" onclick="showFormExample()">
+                            <i class="bi bi-ui-checks me-2"></i> Try Form
+                        </button>
+                    </div>
+                </div>
+                <div class="col-lg-6" data-aos="fade-left">
+                    <div class="code-block">
+                        <div class="code-block-header">
+                            <span>Getting Started</span>
+                            <button class="copy-btn" onclick="copyCode('starter-code')">Copy</button>
+                        </div>
+                        <pre id="starter-code">// Initialize your starter kit
+document.addEventListener('DOMContentLoaded', function() {
+    // Initialize Bootstrap tooltips
+    const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]');
+    const tooltipList = [...tooltipTriggerList].map(el => new bootstrap.Tooltip(el));
+    
+    // Initialize AOS animations
+    AOS.init({
+        duration: 800,
+        once: true,
+        easing: 'ease-in-out'
+    });
+    
+    // Setup your app
+    initApp();
+});</pre>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Bootstrap Modal Example -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Bootstrap Modal Example</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p>This is an example of a Bootstrap 5 modal. It can be used to display dialogs, forms, and other
+                        content.</p>
+                    <form>
+                        <div class="mb-3">
+                            <label for="recipient-name" class="col-form-label">Recipient:</label>
+                            <input type="text" class="form-control" id="recipient-name">
+                        </div>
+                        <div class="mb-3">
+                            <label for="message-text" class="col-form-label">Message:</label>
+                            <textarea class="form-control" id="message-text"></textarea>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Send message</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="container py-5">
+        <div class="row">
+            <div class="col-lg-3 d-none d-lg-block">
+                <div class="card sticky-top" style="top: 100px; z-index: 1;">
+                    <div class="card-body">
+                        <h5 class="fw-bold mb-3">Quick Navigation</h5>
+                        <ul class="nav flex-column">
+                            <li class="nav-item">
+                                <a class="nav-link" href="#bootstrap">
+                                    <i class="bi bi-bootstrap me-2"></i> Bootstrap Components
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#sweetalert">
+                                    <i class="bi bi-exclamation-circle me-2"></i> SweetAlert
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#aos">
+                                    <i class="bi bi-magic me-2"></i> AOS Animations
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#icons">
+                                    <i class="bi bi-emoji-smile me-2"></i> Bootstrap Icons
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#forms">
+                                    <i class="bi bi-ui-checks me-2"></i> Form Handling
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#modals">
+                                    <i class="bi bi-window me-2"></i> Modals
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-9">
+                <!-- Bootstrap Section -->
+                <section id="bootstrap" class="docs-section">
+                    <h2 class="fw-bold" data-aos="fade-up">Bootstrap Components</h2>
+                    <p class="lead" data-aos="fade-up" data-aos-delay="100">Learn how to implement key Bootstrap
+                        components in your project.</p>
+
+                    <div class="showcase-card" data-aos="fade-up" data-aos-delay="150">
+                        <div class="showcase-header">
+                            Creating a Responsive Card Grid
+                        </div>
+                        <div class="showcase-body">
+                            <div class="row g-4">
+                                <div class="col-md-4">
+                                    <div class="card h-100">
+                                        <div class="card-body text-center">
+                                            <i class="bi bi-graph-up text-primary fs-1 mb-3"></i>
+                                            <h5 class="card-title">Analytics</h5>
+                                            <p class="card-text">Track user behavior and performance metrics.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="card h-100">
+                                        <div class="card-body text-center">
+                                            <i class="bi bi-shield-check text-primary fs-1 mb-3"></i>
+                                            <h5 class="card-title">Security</h5>
+                                            <p class="card-text">Protect your data with advanced security.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="card h-100">
+                                        <div class="card-body text-center">
+                                            <i class="bi bi-lightning-charge text-primary fs-1 mb-3"></i>
+                                            <h5 class="card-title">Performance</h5>
+                                            <p class="card-text">Optimize speed and responsiveness.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="showcase-code">
+                            <div class="code-block">
+                                <div class="code-block-header">
+                                    <span>HTML</span>
+                                    <button class="copy-btn" onclick="copyCode('card-grid-code')">Copy</button>
+                                </div>
+                                <pre id="card-grid-code">&lt;div class="row g-4"&gt;
+    &lt;div class="col-md-4"&gt;
+        &lt;div class="card h-100"&gt;
+            &lt;div class="card-body text-center"&gt;
+                &lt;i class="bi bi-graph-up text-primary fs-1 mb-3"&gt;&lt;/i&gt;
+                &lt;h5 class="card-title"&gt;Analytics&lt;/h5&gt;
+                &lt;p class="card-text"&gt;Track user behavior and metrics.&lt;/p&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    
+    &lt;!-- Repeat for other cards --&gt;
+&lt;/div&gt;</pre>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="step-container" data-aos="fade-up">
+                        <div class="step-number">1</div>
+                        <div class="step-content">
+                            <h5>Start with a responsive row</h5>
+                            <p>Use Bootstrap's grid system with <code>row</code> and <code>col-md-*</code> classes to
+                                create a responsive layout.</p>
+                        </div>
+                    </div>
+
+                    <div class="step-container" data-aos="fade-up" data-aos-delay="50">
+                        <div class="step-number">2</div>
+                        <div class="step-content">
+                            <h5>Add equal-height cards</h5>
+                            <p>Apply the <code>h-100</code> class to cards to ensure they have equal heights in each
+                                row.</p>
+                        </div>
+                    </div>
+
+                    <div class="step-container" data-aos="fade-up" data-aos-delay="100">
+                        <div class="step-number">3</div>
+                        <div class="step-content">
+                            <h5>Add icons and styling</h5>
+                            <p>Use Bootstrap Icons with utility classes for spacing and colors to create visual
+                                hierarchy.</p>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- SweetAlert Section -->
+                <section id="sweetalert" class="docs-section">
+                    <h2 class="fw-bold" data-aos="fade-up">SweetAlert Implementation</h2>
+                    <p class="lead" data-aos="fade-up" data-aos-delay="100">Learn how to create beautiful alert dialogs
+                        with SweetAlert2.</p>
+
+                    <div class="row mb-4">
+                        <div class="col-md-6" data-aos="fade-up" data-aos-delay="150">
+                            <div class="card h-100">
+                                <div class="card-body">
+                                    <h5 class="card-title mb-3">Basic Alert</h5>
+                                    <button class="btn btn-primary" onclick="showBasicAlert()">Show Basic Alert</button>
+                                    <div class="code-block mt-3">
+                                        <div class="code-block-header">
+                                            <span>JavaScript</span>
+                                            <button class="copy-btn"
+                                                onclick="copyCode('basic-alert-code')">Copy</button>
+                                        </div>
+                                        <pre id="basic-alert-code">function showBasicAlert() {
+    Swal.fire(
+        'Hello!',
+        'This is a basic SweetAlert dialog.',
+        'success'
+    );
+}</pre>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6" data-aos="fade-up" data-aos-delay="200">
+                            <div class="card h-100">
+                                <div class="card-body">
+                                    <h5 class="card-title mb-3">Confirmation Dialog</h5>
+                                    <button class="btn btn-danger" onclick="showConfirmationAlert()">Show
+                                        Confirmation</button>
+                                    <div class="code-block mt-3">
+                                        <div class="code-block-header">
+                                            <span>JavaScript</span>
+                                            <button class="copy-btn"
+                                                onclick="copyCode('confirm-alert-code')">Copy</button>
+                                        </div>
+                                        <pre id="confirm-alert-code">function showConfirmationAlert() {
+    Swal.fire({
+        title: 'Are you sure?',
+        text: "You won't be able to revert this!",
+        icon: 'warning',
+        showCancelButton: true,
+        confirmButtonColor: '#3085d6',
+        cancelButtonColor: '#d33',
+        confirmButtonText: 'Yes, delete it!'
+    }).then((result) => {
+        if (result.isConfirmed) {
+            Swal.fire(
+                'Deleted!',
+                'Your file has been deleted.',
+                'success'
+            );
+        }
+    });
+}</pre>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="showcase-card" data-aos="fade-up" data-aos-delay="250">
+                        <div class="showcase-header">
+                            Creating a Login Form with SweetAlert
+                        </div>
+                        <div class="showcase-body">
+                            <p>Click the button below to show a login form created with SweetAlert:</p>
+                            <button class="btn btn-primary" onclick="showLoginForm()">Show Login Form</button>
+                        </div>
+                        <div class="showcase-code">
+                            <div class="code-block">
+                                <div class="code-block-header">
+                                    <span>JavaScript</span>
+                                    <button class="copy-btn" onclick="copyCode('login-form-code')">Copy</button>
+                                </div>
+                                <pre id="login-form-code">function showLoginForm() {
+    Swal.fire({
+        title: 'Login',
+        html: `
+            &lt;div class="mb-3"&gt;
+                &lt;label for="swal-email" class="form-label"&gt;Email&lt;/label&gt;
+                &lt;input type="email" id="swal-email" class="swal2-input" placeholder="Enter your email"&gt;
+            &lt;/div&gt;
+            &lt;div class="mb-3"&gt;
+                &lt;label for="swal-password" class="form-label"&gt;Password&lt;/label&gt;
+                &lt;input type="password" id="swal-password" class="swal2-input" placeholder="Enter your password"&gt;
+            &lt;/div&gt;
+            &lt;div class="form-check mb-3"&gt;
+                &lt;input class="form-check-input" type="checkbox" id="swal-remember"&gt;
+                &lt;label class="form-check-label" for="swal-remember"&gt;
+                    Remember me
+                &lt;/label&gt;
+            &lt;/div&gt;
+        `,
+        showCancelButton: true,
+        confirmButtonText: 'Login',
+        cancelButtonText: 'Cancel',
+        focusConfirm: false,
+        preConfirm: () => {
+            // Get form values
+            const email = document.getElementById('swal-email').value;
+            const password = document.getElementById('swal-password').value;
+            const remember = document.getElementById('swal-remember').checked;
+            
+            // Validate form
+            if (!email || !password) {
+                Swal.showValidationMessage('Please enter email and password');
+                return false;
+            }
+            
+            // Return form data
+            return { email, password, remember };
+        }
+    }).then(result => {
+        if (result.isConfirmed) {
+            // Process login
+            const { email, remember } = result.value;
+            Swal.fire(
+                'Login Successful!',
+                `Welcome back, ${email}!${remember ? ' We will remember you.' : ''}`,
+                'success'
+            );
+        }
+    });
+}</pre>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Add more sections here -->
+                </section>
+
+                <!-- AOS Section -->
+                <section id="aos" class="docs-section">
+                    <h2 class="fw-bold" data-aos="fade-up">AOS Animations</h2>
+                    <p class="lead" data-aos="fade-up" data-aos-delay="100">Learn how to add scroll animations to your
+                        website elements.</p>
+                
+                    <div class="row mb-4">
+                        <div class="col-lg-6" data-aos="fade-up" data-aos-delay="150">
+                            <div class="showcase-card">
+                                <div class="showcase-header">
+                                    Initialize AOS in Your Project
+                                </div>
+                                <div class="showcase-code">
+                                    <div class="code-block">
+                                        <div class="code-block-header">
+                                            <span>JavaScript</span>
+                                            <button class="copy-btn" onclick="copyCode('aos-init-code')">Copy</button>
+                                        </div>
+                                        <pre id="aos-init-code">// Add this to your main JavaScript file
+                document.addEventListener('DOMContentLoaded', function() {
+                    AOS.init({
+                        duration: 800,     // values from 0 to 3000
+                        easing: 'ease',    // default easing for AOS animations
+                        once: true,        // whether animation should happen only once
+                        mirror: false,     // whether elements should animate out while scrolling past them
+                        offset: 120        // offset (in px) from the original trigger point
+                    });
+                });</pre>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
+                            <div class="card h-100">
+                                <div class="card-body">
+                                    <h5 class="card-title mb-3">Animation Examples</h5>
+                                    <p>Scroll through these elements to see different AOS animations:</p>
+                
+                                    <div class="d-flex flex-column gap-3 mt-4">
+                                        <div class="card bg-light p-3" data-aos="fade-up">
+                                            <p class="mb-0"><code>data-aos="fade-up"</code></p>
+                                        </div>
+                
+                                        <div class="card bg-light p-3" data-aos="fade-down">
+                                            <p class="mb-0"><code>data-aos="fade-down"</code></p>
+                                        </div>
+                
+                                        <div class="card bg-light p-3" data-aos="fade-right">
+                                            <p class="mb-0"><code>data-aos="fade-right"</code></p>
+                                        </div>
+                
+                                        <div class="card bg-light p-3" data-aos="fade-left">
+                                            <p class="mb-0"><code>data-aos="fade-left"</code></p>
+                                        </div>
+                
+                                        <div class="card bg-light p-3" data-aos="zoom-in">
+                                            <p class="mb-0"><code>data-aos="zoom-in"</code></p>
+                                        </div>
+                
+                                        <div class="card bg-light p-3" data-aos="flip-up">
+                                            <p class="mb-0"><code>data-aos="flip-up"</code></p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                
+                    <div class="showcase-card" data-aos="fade-up" data-aos-delay="250">
+                        <div class="showcase-header">
+                            Creating a Staggered Animation Sequence
+                        </div>
+                        <div class="showcase-body">
+                            <p>Use the <code>data-aos-delay</code> attribute to create staggered animations:</p>
+                
+                            <div class="row g-4">
+                                <div class="col-md-4" data-aos="fade-up" data-aos-delay="0">
+                                    <div class="card bg-primary text-white p-4 text-center">
+                                        <h3>1</h3>
+                                        <p class="mb-0">First Item</p>
+                                    </div>
+                                </div>
+                                <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+                                    <div class="card bg-primary text-white p-4 text-center">
+                                        <h3>2</h3>
+                                        <p class="mb-0">Second Item</p>
+                                    </div>
+                                </div>
+                                <div class="col-md-4" data-aos="fade-up" data-aos-delay="400">
+                                    <div class="card bg-primary text-white p-4 text-center">
+                                        <h3>3</h3>
+                                        <p class="mb-0">Third Item</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="showcase-code">
+                            <div class="code-block">
+                                <div class="code-block-header">
+                                    <span>HTML</span>
+                                    <button class="copy-btn" onclick="copyCode('aos-stagger-code')">Copy</button>
+                                </div>
+                                <pre id="aos-stagger-code">&lt;div class="row g-4"&gt;
+    &lt;div class="col-md-4" data-aos="fade-up" data-aos-delay="0"&gt;
+        &lt;div class="card bg-primary text-white p-4 text-center"&gt;
+            &lt;h3&gt;1&lt;/h3&gt;
+            &lt;p class="mb-0"&gt;First Item&lt;/p&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+
+    &lt;div class="col-md-4" data-aos="fade-up" data-aos-delay="200"&gt;
+        &lt;div class="card bg-primary text-white p-4 text-center"&gt;
+            &lt;h3&gt;2&lt;/h3&gt;
+            &lt;p class="mb-0"&gt;Second Item&lt;/p&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+
+    &lt;div class="col-md-4" data-aos="fade-up" data-aos-delay="400"&gt;
+        &lt;div class="card bg-primary text-white p-4 text-center"&gt;
+            &lt;h3&gt;3&lt;/h3&gt;
+            &lt;p class="mb-0"&gt;Third Item&lt;/p&gt;
+        &lt;/div&gt;
+    &lt;/div
+&lt;/div&gt;</pre>
+                            </div>
+                        </div>
+                    </div>
+                
+                    <div class="step-container" data-aos="fade-up">
+                        <div class="step-number">1</div>
+                        <div class="step-content">
+                            <h5>Initialize AOS</h5>
+                            <p>Ensure AOS is initialized in your JavaScript file with the desired configuration.</p>
+                        </div>
+                    </div>
+                
+                    <div class="step-container" data-aos="fade-up" data-aos-delay="50">
+                        <div class="step-number">2</div>
+                        <div class="step-content">
+                            <h5>Add <code>data-aos</code> attributes</h5>
+                            <p>Use the <code>data-aos</code> attribute to specify the animation type for each element.</p>
+                        </div>
+                    </div>
+                
+                    <div class="step-container" data-aos="fade-up" data-aos-delay="100">
+                        <div class="step-number">3</div>
+                        <div class="step-content">
+                            <h5>Stagger animations</h5>
+                            <p>Use the <code>data-aos-delay</code> attribute to create a staggered animation effect.</p>
+                        </div>
+                    </div>
+                </section>
+                
+                <!-- Icons Section -->
+                <section id="icons" class="docs-section">
+                    <h2 class="fw-bold" data-aos="fade-up">Bootstrap Icons</h2>
+                    <p class="lead" data-aos="fade-up" data-aos-delay="100">Learn how to use Bootstrap Icons to enhance your UI.</p>
+                
+                    <div class="showcase-card" data-aos="fade-up" data-aos-delay="150">
+                        <div class="showcase-header">
+                            Using Bootstrap Icons
+                        </div>
+                        <div class="showcase-body">
+                            <p>Bootstrap Icons are easy to use and can be added to your project with simple HTML.</p>
+                            <div class="row g-4">
+                                <div class="col-md-4">
+                                    <div class="card h-100">
+                                        <div class="card-body text-center">
+                                            <i class="bi bi-heart-fill text-danger fs-1 mb-3"></i>
+                                            <h5 class="card-title">Heart Icon</h5>
+                                            <p class="card-text">Use <code>&lt;i class="bi bi-heart-fill"&gt;&lt;/i&gt;</code> to add a
+                                                heart icon.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="card h-100">
+                                        <div class="card-body text-center">
+                                            <i class="bi bi-star-fill text-warning fs-1 mb-3"></i>
+                                            <h5 class="card-title">Star Icon</h5>
+                                            <p class="card-text">Use <code>&lt;i class="bi bi-star-fill"&gt;&lt;/i&gt;</code> to add a
+                                                star icon.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="card h-100">
+                                        <div class="card-body text-center">
+                                            <i class="bi bi-gear-fill text-primary fs-1 mb-3"></i>
+                                            <h5 class="card-title">Gear Icon</h5>
+                                            <p class="card-text">Use <code>&lt;i class="bi bi-gear-fill"&gt;&lt;/i&gt;</code> to add a
+                                                gear icon.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="showcase-code">
+                            <div class="code-block">
+                                <div class="code-block-header">
+                                    <span>HTML</span>
+                                    <button class="copy-btn" onclick="copyCode('icons-code')">Copy</button>
+                                </div>
+                                <pre id="icons-code">&lt;i class="bi bi-heart-fill text-danger fs-1"&gt;&lt;/i&gt;
+&lt;i class="bi bi-star-fill text-warning fs-1"&gt;&lt;/i&gt;
+&lt;i class="bi bi-gear-fill text-primary fs-1"&gt;&lt;/i&gt;</pre>
+                            </div>
+                        </div>
+                    </div>
+                
+                    <div class="step-container" data-aos="fade-up">
+                        <div class="step-number">1</div>
+                        <div class="step-content">
+                            <h5>Include Bootstrap Icons</h5>
+                            <p>Ensure the Bootstrap Icons CSS file is included in your project.</p>
+                        </div>
+                    </div>
+                
+                    <div class="step-container" data-aos="fade-up" data-aos-delay="50">
+                        <div class="step-number">2</div>
+                        <div class="step-content">
+                            <h5>Add Icons</h5>
+                            <p>Use the <code>&lt;i&gt;</code> tag with the appropriate class to add icons.</p>
+                        </div>
+                    </div>
+                
+                    <div class="step-container" data-aos="fade-up" data-aos-delay="100">
+                        <div class="step-number">3</div>
+                        <div class="step-content">
+                            <h5>Style Icons</h5>
+                            <p>Use utility classes to style icons, such as <code>text-danger</code> or <code>fs-1</code>.</p>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer mt-5">
+        <div class="container text-center">
+            <p class="mb-0">&copy; 2023 Josiah's Ultimate Starter Kit. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <!-- Bootstrap 5 JS Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- SweetAlert2 JS -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <!-- AOS JS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        // Initialize AOS
+        AOS.init({
+            duration: 800,
+            once: true,
+            easing: 'ease-in-out'
+        });
+
+        // Copy code function
+        function copyCode(id) {
+            const code = document.getElementById(id).textContent;
+            navigator.clipboard.writeText(code).then(() => {
+                Swal.fire({
+                    icon: 'success',
+                    title: 'Copied!',
+                    text: 'Code has been copied to clipboard.',
+                    timer: 1500,
+                    showConfirmButton: false
+                });
+            });
+        }
+
+        // SweetAlert Examples
+        function showBasicAlert() {
+            Swal.fire(
+                'Hello!',
+                'This is a basic SweetAlert dialog.',
+                'success'
+            );
+        }
+
+        function showConfirmationAlert() {
+            Swal.fire({
+                title: 'Are you sure?',
+                text: "You won't be able to revert this!",
+                icon: 'warning',
+                showCancelButton: true,
+                confirmButtonColor: '#3085d6',
+                cancelButtonColor: '#d33',
+                confirmButtonText: 'Yes, delete it!'
+            }).then((result) => {
+                if (result.isConfirmed) {
+                    Swal.fire(
+                        'Deleted!',
+                        'Your file has been deleted.',
+                        'success'
+                    );
+                }
+            });
+        }
+
+        function showLoginForm() {
+            Swal.fire({
+                title: 'Login',
+                html: `
+                    <div class="mb-3">
+                        <label for="swal-email" class="form-label">Email</label>
+                        <input type="email" id="swal-email" class="swal2-input" placeholder="Enter your email">
+                    </div>
+                    <div class="mb-3">
+                        <label for="swal-password" class="form-label">Password</label>
+                        <input type="password" id="swal-password" class="swal2-input" placeholder="Enter your password">
+                    </div>
+                    <div class="form-check mb-3">
+                        <input class="form-check-input" type="checkbox" id="swal-remember">
+                        <label class="form-check-label" for="swal-remember">
+                            Remember me
+                        </label>
+                    </div>
+                `,
+                showCancelButton: true,
+                confirmButtonText: 'Login',
+                cancelButtonText: 'Cancel',
+                focusConfirm: false,
+                preConfirm: () => {
+                    const email = document.getElementById('swal-email').value;
+                    const password = document.getElementById('swal-password').value;
+                    const remember = document.getElementById('swal-remember').checked;
+
+                    if (!email || !password) {
+                        Swal.showValidationMessage('Please enter email and password');
+                        return false;
+                    }
+
+                    return { email, password, remember };
+                }
+            }).then(result => {
+                if (result.isConfirmed) {
+                    const { email, remember } = result.value;
+                    Swal.fire(
+                        'Login Successful!',
+                        `Welcome back, ${email}!${remember ? ' We will remember you.' : ''}`,
+                        'success'
+                    );
+                }
+            });
+        }
+
+        function showDemoAlert() {
+            Swal.fire({
+                title: 'Welcome!',
+                text: 'This is a demo of Josiah\'s Ultimate Starter Kit.',
+                icon: 'info',
+                confirmButtonText: 'Cool!'
+            });
+        }
+
+        function showModalExample() {
+            // Example modal implementation
+            const modal = new bootstrap.Modal(document.getElementById('exampleModal'));
+            modal.show();
+        }
+
+        function showFormExample() {
+            // Example form implementation
+            Swal.fire({
+                title: 'Form Example',
+                html: `
+                    <form id="exampleForm">
+                        <div class="mb-3">
+                            <label for="name" class="form-label">Name</label>
+                            <input type="text" class="form-control" id="name" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="email" class="form-label">Email</label>
+                            <input type="email" class="form-control" id="email" required>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Submit</button>
+                    </form>
+                `,
+                showCancelButton: false,
+                focusConfirm: false,
+                preConfirm: () => {
+                    const name = document.getElementById('name').value;
+                    const email = document.getElementById('email').value;
+
+                    if (!name || !email) {
+                        Swal.showValidationMessage('Please fill out all fields');
+                        return false;
+                    }
+
+                    return { name, email };
+                }
+            }).then(result => {
+                if (result.isConfirmed) {
+                    Swal.fire(
+                        'Form Submitted!',
+                        `Thank you, ${result.value.name}!`,
+                        'success'
+                    );
+                }
+            });
+        }
+    </script>
+    </body>
+    
+    </html>
