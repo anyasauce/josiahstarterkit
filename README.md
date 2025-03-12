@@ -1,4 +1,4 @@
-# Josiah's Frontend Starter Kit
+# Josiah's Starter Kit
 
 A simple and modern frontend starter kit to kickstart your web development projects with essential tools and libraries.
 
@@ -11,13 +11,13 @@ A simple and modern frontend starter kit to kickstart your web development proje
 
 ## Tech Stack
 
-- <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" title="HTML5" width="40" height="40"/> HTML  
-- <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" title="CSS3" width="40" height="40"/> CSS  
-- <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" title="JavaScript" width="40" height="40"/> JavaScript  
-- <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg" title="Bootstrap" width="40" height="40"/> Bootstrap 5  
-- <img src="https://img.icons8.com/color/48/000000/sweet.png" title="SweetAlert2" width="40" height="40"/> SweetAlert2  
-- <img src="https://img.icons8.com/ios-filled/50/000000/animation.png" title="AOS" width="40" height="40"/> AOS  
-- <img src="https://img.icons8.com/color/48/000000/google-logo.png" title="Google Fonts" width="40" height="40"/> Google Fonts
+- <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" title="HTML5" width="40" height="40" style="vertical-align: middle;"/> **HTML**  
+- <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" title="CSS3" width="40" height="40" style="vertical-align: middle;"/> **CSS**  
+- <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" title="JavaScript" width="40" height="40" style="vertical-align: middle;"/> **JavaScript**  
+- <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg" title="Bootstrap" width="40" height="40" style="vertical-align: middle;"/> **Bootstrap 5**  
+- <img src="https://github.com/sweetalert2/sweetalert2/blob/main/assets/swal2-logo.png?raw=true" title="SweetAlert2" width="40" height="40" style="vertical-align: middle;"/> **SweetAlert2**  
+- <img src="https://raw.githubusercontent.com/michalsnik/aos/master/logo/aos-logo.svg" title="AOS" width="50" height="50" style="vertical-align: middle;"/> **AOS**  
+- <img src="https://img.icons8.com/color/48/000000/google-logo.png" title="Google Fonts" width="40" height="40" style="vertical-align: middle;"/> **Google Fonts**
 
 ## Getting Started
 
