@@ -24,8 +24,8 @@ A simple and modern frontend starter kit to kickstart your web development proje
 ### Clone the Repository
 
 ```bash
-git clone https://github.com/your-username/josiahs-frontend-starter-kit.git
-cd josiahs-frontend-starter-kit
+git clone https://github.com/anyasauce/josiahstarterkit.git
+cd josiahstarterkit
 ```
 
 ### Open in Browser
@@ -35,7 +35,7 @@ Open the `index.html` file in your preferred browser to view the project.
 ## Usage
 
 1. Customize `index.html`, `assets/css/main.css`, and `assets/js/main.js` to fit your project needs.
-2. Ensure external libraries (Bootstrap, SweetAlert2, AOS) are loaded via the provided CDN links.
+2. Ensure external libraries (Bootstrap 5, SweetAlert2, AOS) are loaded via the **local installation** in the `/assets/vendor/` directory.
 
 ## Structure
 
